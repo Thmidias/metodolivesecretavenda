@@ -247,7 +247,7 @@
             max-width: 480px; /* Limitar largura do placeholder de vídeo */
             border: 1px dashed var(--cor-borda-cards);
         }
-        .video-placeholder span { font-size: 0.9em; }
+        .video-placeholder span, .video-placeholder iframe { font-size: 0.9em; width: 100%; height: 100%;} /* Ajuste para iframe */
 
         /* Prova social agregada */
         .aggregated-proof {
@@ -257,16 +257,7 @@
             color: var(--cor-primaria-verde);
             font-weight: 600;
         }
-        .mini-case {
-            background-color: var(--cor-fundo-cards);
-            border: 1px solid var(--cor-borda-cards);
-            border-left: 4px solid var(--cor-primaria-verde);
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 5px;
-            font-size: 0.9em;
-        }
-        .mini-case strong { color: var(--cor-texto-principal); }
+        /* .mini-case foi removido/substituído, então o estilo pode ser removido ou adaptado se houver outros usos */
 
 
         footer { 
@@ -660,13 +651,14 @@
             <div class="testimonial-item">
                 <h3>Loja Galille Store: De 10 para <span class="highlight">93 Pedidos</span> na Primeira Live Pós-Método!</h3>
                 <div class="video-placeholder">
-                    <iframe width="337" height="599" src="https://www.youtube.com/embed/WHLlo63Zrnw" title="Feedback Galille" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/WHLlo63Zrnw" title="Feedback Galille" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <p>"Nunca vendemos tanto em tão pouco tempo. Foram 17 mil e 93 pedidos fechados !" - <strong>Fabio Galille</strong></p>
             </div>
-            <div class="mini-case">
-                <p><strong>Antes do Live Secreta:</strong> "Nossas lives mal pagavam o investimento em peças."</p>
-                <p><strong>Depois do Live Secreta:</strong> "Fizemos R$6 mil em 3 horas na nossa última live! Mudou o jogo para nós." - [Laiz Bach]</p>
+            <div class="testimonial-item">
+                <h3>Laiz Bach Store: <span class="highlight">R$6 Mil em 3 Horas</span> de Live!</h3>
+                <img src="https://placehold.co/600x350/1A1A1A/A8FC00?text=Print+Resultados+Laiz+Bach" alt="Print dos Resultados da Laiz Bach Store com o Método Live Secreta">
+                <p>"Antes, nossas lives mal pagavam o investimento. Depois do Live Secreta, fizemos R$6 mil em 3 horas! Mudou o jogo para nós." - <strong>Laiz Bach</strong></p>
             </div>
             <div class="testimonial-item">
                 <h3>Malu Moda Mix : Grupo VIP Lotado e <span class="highlight">Vendas Disparadas!</span></h3>
@@ -753,6 +745,106 @@
                 <a href="#oferta" class="cta-button">QUERO TODOS OS BÓNUS AGORA!</a>
             </div>
         </section>
+
+        <section id="oferta">
+            <h2><span class="highlight">Acesso Imediato</span> à Sua Nova Realidade de Vendas!</h2>
+            
+            <div class="price-section">
+                <h3 class="offer-title">Pacote Completo Método Live Secreta</h3>
+                <div class="value-stack">
+                    <p>Método Live Secreta Completo (10 Módulos Detalhados) <span class="value-original">(Valor R$ 997,00)</span></p>
+                    <p>Materiais de Apoio (Checklists, Planilhas, Planos de Ação) <span class="value-original">(Valor R$ 297,00)</span></p>
+                    <p>Bónus 1: Grupo VIP de Suporte & Networking <span class="value-original">(Valor R$ 497,00/ano)</span></p>
+                    <p>Bónus 2: Guia Prático Tráfego Pago Low-Cost <span class="value-original">(Valor R$ 197,00)</span></p>
+                    <p>Bónus 3: Biblioteca Premium de Roteiros para Lives <span class="value-original">(Valor R$ 397,00)</span></p>
+                    <p class="total-value">Valor Total de Tudo Que Você Leva: <span class="value-original">R$ 2.385,00</span></p>
+                </div>
+
+                <p class="current-price-label">Seu Investimento Para Transformar Suas Vendas Hoje:</p>
+                <div class="current-price">R$ 97</div>
+                <p class="installments">(Ou em até 12 parcelas de R$ 9,70 no cartão)</p>
+                <div class="scarcity-timer">
+                    <p>⚠️ Esta oferta especial com todos os bónus é por <span class="highlight">tempo limitado!</span></p>
+                    </div>
+                <a href="LINK_DO_SEU_CHECKOUT_AQUI" class="cta-button">QUERO EXPLODIR MINHAS VENDAS AGORA!</a>
+                <p style="font-size:0.85em; margin-top:15px; color: var(--cor-texto-secundario);">Compra 100% Segura | Acesso Imediato</p>
+            </div>
+        </section>
+
+        <section id="garantia">
+            <h2>Sua Decisão <span class="highlight">100% Livre de Risco!</span></h2>
+            <div style="text-align:center;">
+                <img src="https://placehold.co/100x100/1A1A1A/A8FC00?text=RISCO+ZERO&font=montserrat" alt="[Imagem de Selo de Garantia de 7 Dias Risco Zero]" class="guarantee-badge">
+            </div>
+            <p>Você tem <strong>7 dias completos</strong> para mergulhar no Método Live Secreta. Se, por qualquer motivo, você não ficar totalmente satisfeito(a) ou não vir o potencial de transformação para sua loja, basta nos enviar um e-mail e devolveremos 100% do seu investimento. Simples, rápido e sem perguntas.</p>
+            <p><strong>O risco é todo nosso. A oportunidade de transformar suas vendas é toda sua.</strong></p>
+        </section>
+
+        <section id="autor">
+            <h2 style="margin-bottom: 25px;">Quem Vai Te Guiar Nesta <span class="highlight">Jornada de Sucesso?</span></h2>
+            <div style="text-align:center; margin-bottom:15px;">
+                 <img src="https://placehold.co/150x150/1A1A1A/FFFFFF?text=Sua+Foto&font=montserrat" alt="[Imagem de Foto do Autor(a)]">
+            </div>
+            <h3 style="text-align:center; color: var(--cor-texto-principal); text-transform:none;">[O SEU NOME / NOME DA SUA EMPRESA]</h3>
+            <p style="text-align:center; font-style:italic; color: var(--cor-primaria-verde); margin-bottom:15px; font-weight:500;">Especialista em Vendas Online para Moda & Criador(a) do Método Live Secreta</p>
+            <p style="text-align: center; max-width: 650px; margin-left:auto; margin-right:auto; font-size:0.9em;">Depois de [X anos/meses] no campo de batalha do varejo de moda, testando o que realmente funciona (e o que não funciona!) para vender online, desenvolvi o Método Live Secreta. Minha paixão é ver lojistas como você superarem as dificuldades e alcançarem a liberdade financeira e o reconhecimento que merecem. Já ajudei [NÚMERO] de empreendedores a mudarem seus negócios através desta metodologia.</p>
+            <p class="mission-statement" style="text-align: center; max-width: 650px; margin-left:auto; margin-right:auto; font-size:0.9em;"><strong>Minha missão:</strong> "Capacitar você com as estratégias exatas para transformar suas lives na sua maior fonte de renda, de forma consistente e lucrativa."</p>
+        </section>
+
+        <section id="faq">
+            <h2>Ainda Tem Dúvidas? <span class="highlight">Nós Respondemos!</span></h2>
+            <div class="faq-item">
+                <h3>Para quem é exatamente este método?</h3>
+                <p>Para donos de lojas de moda (roupas, calçados, acessórios, etc.) que desejam usar lives para vender muito mais, mesmo que estejam começando ou tenham poucos seguidores.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Realmente funciona se eu tiver poucos seguidores?</h3>
+                <p>Sim! O foco é na estratégia de atração e engajamento do público certo, não apenas em números. Ensinamos como fazer isso do zero.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Preciso ser expert em tecnologia?</h3>
+                <p>De forma alguma! O método é passo a passo, prático e com linguagem simples. Além disso, você terá suporte no Grupo VIP.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Por quanto tempo terei acesso ao conteúdo?</h3>
+                <p>[Defina o tempo de acesso e coloque aqui, ex: Acesso vitalício para você ver e rever quantas vezes quiser! / Acesso por 1 ano completo.].</p>
+            </div>
+            <div class="faq-item">
+                <h3>Como funciona o suporte?</h3>
+                <p>Através do nosso Grupo VIP exclusivo no WhatsApp, onde você pode tirar dúvidas diretamente com nossa equipa e interagir com outros alunos.</p>
+            </div>
+            <div class="faq-item">
+                <h3>E se eu não gostar ou não tiver resultados? É seguro?</h3>
+                <p>Totalmente seguro! Você tem a nossa Garantia Incondicional de 7 Dias. Se não ficar satisfeito(a), devolvemos 100% do seu dinheiro. O risco é zero.</p>
+            </div>
+            </section>
+
+        <section id="ultimo-cta">
+            <h2>Sua Loja de Moda Pronta Para <span class="highlight">Vender Como Nunca?</span></h2>
+            <p>Não adie mais o sucesso do seu negócio. O Método Live Secreta é o caminho mais rápido e seguro para transformar suas lives em uma verdadeira máquina de pedidos.</p>
+            <a href="LINK_DO_SEU_CHECKOUT_AQUI" class="cta-button">QUERO MINHA VAGA NO LIVE SECRETA AGORA!</a>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; <span id="currentYear"></span> [Nome da Sua Empresa/Seu Nome] - Todos os direitos reservados.</p>
+        <p class="cnpj">CNPJ: [SEU CNPJ AQUI, EX: XX.XXX.XXX/0001-XX (Opcional, mas recomendado)]</p>
+        <p>
+            <a href="#termos">Termos de Uso</a> | 
+            <a href="#privacidade">Política de Privacidade</a> |
+            <a href="mailto:SEUEMAILDECONTATO@EXEMPLO.COM">Contato</a>
+        </p>
+        </footer>
+
+    <a href="https://wa.me/SEUNUMERODOWHATSAPP?text=Olá!%20Tenho%20interesse%20no%20Método%20Live%20Secreta." class="whatsapp-float" target="_blank" aria-label="Fale conosco pelo WhatsApp">
+        <svg viewBox="0 0 32 32"><path d=" M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.044-.53-.044-.315 0-.76.11-1.042.315-.315.187-.486.42-.6.6s-.41.99-.41 1.49-.015 1.746.015 1.962c.15.372.375.744.787 1.187.578.617 1.01 1.146 1.666 1.77 1.05 1.033 2.37 1.61 3.798 2.19.975.402 1.667.545 2.23.545.69 0 1.13-.143 1.327-.26.402-.26.683-.903.803-1.36.12-.43.12-.805.084-1.018-.036-.214-.108-.29-.216-.402-.16-.16-.402-.215-.6-.215zM16 0C7.16 0 0 7.16 0 16s7.16 16 16 16 16-7.16 16-16S24.84 0 16 0zm0 29C8.82 29 3 23.18 3 16S8.82 3 16 3s13 5.82 13 13-5.82 13-13 13z"/></svg>
+    </a>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+
 
         <section id="oferta">
             <h2><span class="highlight">Acesso Imediato</span> à Sua Nova Realidade de Vendas!</h2>
