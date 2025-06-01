@@ -11,9 +11,9 @@
         /* Estilos Inspirados em cursocaixapreta.com.br */
         :root {
             --cor-primaria-verde: #A8FC00;
-            --cor-fundo-principal: #0D0D0D; /* Um preto bem escuro, quase #000 */
-            --cor-fundo-container: #121212; /* Um pouco mais claro que o body */
-            --cor-fundo-cards: #1A1A1A; /* Para cards e elementos internos */
+            --cor-fundo-principal: #0D0D0D; 
+            --cor-fundo-container: #121212; 
+            --cor-fundo-cards: #1A1A1A; 
             --cor-borda-cards: #2C2C2C;
             --cor-texto-principal: #FFFFFF;
             --cor-texto-secundario: #B7B7B7;
@@ -29,39 +29,40 @@
             padding: 0; 
             color: var(--cor-texto-principal); 
             background-color: var(--cor-fundo-principal);
+            -webkit-font-smoothing: antialiased; /* Melhor renderização da fonte */
+            -moz-osx-font-smoothing: grayscale;
         }
         .container { 
             max-width: 960px; 
-            margin: 0 auto; /* Removida margem superior/inferior para controle por seções */
-            padding: 0 20px; /* Padding lateral */
+            margin: 0 auto; 
+            padding: 0 20px; 
             background-color: var(--cor-fundo-container); 
         }
 
-        /* Ajuste para que o container não tenha sombra própria, pois o body é escuro */
-        .container-wrapper { /* Nova div para envolver o conteúdo e aplicar sombra se necessário no futuro */
+        .container-wrapper { 
             background-color: var(--cor-fundo-container);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Sombra mais escura para tema escuro */
-            border-radius: 10px; /* Aplicar borda ao wrapper */
-            margin: 30px auto; /* Margem do wrapper */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+            border-radius: 10px; 
+            margin: 30px auto; 
             max-width: 960px;
         }
 
 
         header.hero { 
-            background: var(--cor-fundo-principal); /* Fundo preto */
+            background: var(--cor-fundo-principal); 
             color: var(--cor-texto-principal); 
             padding: 70px 30px; 
             text-align: center; 
-            border-top-left-radius: 10px; /* Se o container-wrapper for usado */
-            border-top-right-radius: 10px; /* Se o container-wrapper for usado */
+            border-top-left-radius: 10px; 
+            border-top-right-radius: 10px; 
         }
         header.hero h1 { 
-            font-size: 3em; /* Ajustado */
+            font-size: 3em; 
             margin-bottom: 20px; 
             font-weight: 900; 
             text-transform: uppercase;
-            letter-spacing: -1px; /* Para um visual mais condensado */
-            color: var(--cor-primaria-verde); /* Título principal em verde */
+            letter-spacing: -1px; 
+            color: var(--cor-primaria-verde); 
         }
         header.hero .subheadline { 
             font-size: 1.4em; 
@@ -73,10 +74,10 @@
             padding: 50px 25px; 
             border-bottom: 1px solid var(--cor-borda-cards); 
         }
-        .container-wrapper section:last-of-type { /* Se usar container-wrapper */
+        .container-wrapper section:last-of-type {
              border-bottom: none;
         }
-        .container section:last-of-type { /* Se não usar container-wrapper */
+        .container section:last-of-type { 
             border-bottom: none;
         }
 
@@ -93,7 +94,7 @@
             color: var(--cor-primaria-verde); 
             font-size: 1.8em; 
             margin-top: 25px;
-            margin-bottom: 15px; /* Adicionado */
+            margin-bottom: 15px; 
             font-weight: 700;
             text-transform: uppercase;
         }
@@ -103,18 +104,18 @@
             background-color: var(--cor-primaria-verde); 
             color: var(--cor-texto-botao); 
             text-decoration: none;
-            font-size: 1.3em; /* Ajustado */
-            font-weight: 700; /* Mais forte */
-            border-radius: 6px; /* Menos arredondado */
+            font-size: 1.3em; 
+            font-weight: 700; 
+            border-radius: 6px; 
             text-align: center;
             transition: all 0.2s ease-in-out;
-            box-shadow: 0px 4px 0px 0px #000000; /* Sombra sólida preta */
+            box-shadow: 0px 4px 0px 0px #000000; 
             border: none;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
         .cta-button:hover { 
-            background-color: #8ccf00; /* Verde um pouco mais escuro no hover */
+            background-color: #8ccf00; 
             transform: translateY(-2px); 
             box-shadow: 0px 6px 0px 0px #000000;
         }
@@ -142,9 +143,9 @@
             transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(0,0,0,0.3);
         }
-        .module-item h3, .bonus-item h3 { /* Títulos dentro dos cards */
+        .module-item h3, .bonus-item h3 { 
             margin-top: 0; 
-            font-size: 1.5em; /* Ajustado */
+            font-size: 1.5em; 
             color: var(--cor-primaria-verde);
         }
         .module-item p, .bonus-item p {
@@ -172,7 +173,7 @@
         .video-placeholder {
             background: #000000; 
             color: var(--cor-texto-secundario);
-            padding: 60px 20px; /* Reduzido */
+            padding: 60px 20px; 
             text-align: center;
             border-radius: 6px;
             margin: 15px 0;
@@ -189,32 +190,29 @@
             background: var(--cor-fundo-principal); 
             color: var(--cor-texto-secundario); 
             border-top: 1px solid var(--cor-borda-cards);
-            /* Remover border-radius se o container-wrapper não for usado, ou ajustar */
         }
         footer a { color: var(--cor-primaria-verde); text-decoration: none; font-weight: 500; }
         footer a:hover { text-decoration: underline; color: #8ccf00;}
         
         ul { 
-            list-style-type: none; /* Remover marcador padrão */
+            list-style-type: none; 
             padding-left: 0; 
         }
         ul li { 
             margin-bottom: 12px; 
-            padding-left: 25px; /* Espaço para o ícone */
+            padding-left: 25px; 
             position: relative;
             color: var(--cor-texto-secundario);
         }
         ul li::before {
-            content: '✓'; /* Checkmark */
+            content: '✓'; 
             color: var(--cor-primaria-verde);
             position: absolute;
             left: 0;
             font-weight: bold;
         }
-        /* Lista de benefícios na oferta */
         #oferta .price-section ul li::before {
-            content: '✨'; /* Estrela para benefícios */
-             /* A cor já é verde, pode manter ou mudar */
+            content: '✨'; 
         }
 
 
@@ -224,13 +222,13 @@
             border-radius: 8px;
             text-align: center;
             border: 1px solid var(--cor-borda-cards);
-            margin-top: 30px; /* Adicionado */
+            margin-top: 30px; 
         }
         .price-section p { color: var(--cor-texto-secundario); }
         .price-section p strong { color: var(--cor-texto-principal); }
         .price-section .old-price {
             text-decoration: line-through;
-            color: #888; /* Cinza mais claro para contraste */
+            color: #888; 
             font-size: 1.4em;
         }
         .price-section .current-price {
@@ -243,7 +241,7 @@
             font-size: 1.1em;
             color: var(--cor-texto-secundario);
         }
-        .price-section .cta-button { /* Botão de compra na oferta */
+        .price-section .cta-button { 
             background-color: var(--cor-primaria-verde);
             color: var(--cor-texto-botao);
             box-shadow: 0px 4px 0px 0px #000000;
@@ -254,9 +252,8 @@
 
         .guarantee-badge {
             display: block;
-            max-width: 120px; /* Reduzido */
+            max-width: 120px; 
             margin: 25px auto;
-            /* Idealmente, usar um SVG ou imagem que combine com o tema escuro */
         }
         #garantia h2 { color: var(--cor-texto-principal); }
         #garantia p { color: var(--cor-texto-secundario); text-align: center; }
@@ -283,9 +280,9 @@
         }
         .faq-item h3 {
             margin-top: 0;
-            font-size: 1.4em; /* Ajustado */
+            font-size: 1.4em; 
             color: var(--cor-texto-principal);
-            text-transform: none; /* FAQ não precisa ser uppercase */
+            text-transform: none; 
         }
         .faq-item p {
             color: var(--cor-texto-secundario);
@@ -300,7 +297,6 @@
          #ultimo-cta h2 { color: var(--cor-primaria-verde); }
          #ultimo-cta p { font-size:1.3em; margin-bottom:30px; font-weight: 300; color: var(--cor-texto-secundario); }
 
-        /* Estilos para o Botão Flutuante do WhatsApp */
         .whatsapp-float {
             position: fixed;
             width: 60px;
@@ -311,10 +307,10 @@
             color: #FFF;
             border-radius: 50px;
             text-align: center;
-            font-size: 30px; /* Tamanho do ícone */
+            font-size: 30px; 
             box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
-            z-index: 1000; /* Para ficar sobre outros elementos */
-            display: flex; /* Para centralizar o ícone SVG */
+            z-index: 1000; 
+            display: flex; 
             align-items: center;
             justify-content: center;
             text-decoration: none;
@@ -322,12 +318,113 @@
         }
         .whatsapp-float:hover {
             transform: scale(1.1);
-            background-color: #1EBE57; /* Um tom de verde ligeiramente mais escuro no hover */
+            background-color: #1EBE57; 
         }
         .whatsapp-float svg {
-            width: 32px; /* Tamanho do ícone SVG */
+            width: 32px; 
             height: 32px;
             fill: white;
+        }
+
+        /* Media Queries para Otimização Mobile dos Títulos */
+        @media (max-width: 768px) {
+            header.hero {
+                padding: 50px 20px; /* Padding do cabeçalho */
+            }
+            header.hero h1 {
+                font-size: 2.2em; /* Tamanho do título principal */
+                letter-spacing: -0.5px; /* Ajuste de espaçamento */
+            }
+            header.hero .subheadline {
+                font-size: 1.1em; /* Tamanho do subtítulo */
+            }
+            h2 {
+                font-size: 1.9em; /* Tamanho dos títulos de seção */
+                letter-spacing: 0; /* Remover espaçamento negativo */
+            }
+            h3 {
+                font-size: 1.5em; /* Tamanho dos subtítulos de seção */
+                letter-spacing: 0;
+            }
+            .cta-button {
+                font-size: 1.1em; /* Tamanho dos botões */
+                padding: 14px 28px;
+            }
+            .price-section .current-price {
+                font-size: 2.6em; /* Tamanho do preço */
+            }
+            .modules-grid, .bonuses-grid { 
+                grid-template-columns: 1fr; /* Uma coluna para os grids */
+            }
+            section {
+                padding: 35px 15px; /* Padding das seções */
+            }
+            .container {
+                 padding: 0 10px; /* Padding lateral do container principal */
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                line-height: 1.6; /* Ajuste fino da altura da linha */
+            }
+            header.hero {
+                padding: 35px 15px;
+            }
+            header.hero h1 {
+                font-size: 1.8em; 
+            }
+            header.hero .subheadline {
+                font-size: 1em;
+                line-height: 1.4; /* Melhorar leitura do subtítulo */
+            }
+            h2 {
+                font-size: 1.6em; 
+                margin-bottom: 30px; /* Menos margem inferior */
+            }
+            h3 {
+                font-size: 1.3em; 
+                margin-bottom: 10px;
+            }
+            .cta-button {
+                font-size: 1em; 
+                padding: 12px 20px;
+            }
+            .price-section .current-price {
+                font-size: 2.2em;
+            }
+            .price-section .old-price {
+                font-size: 1.1em;
+            }
+            .price-section .installments {
+                font-size: 0.9em;
+            }
+            .whatsapp-float { 
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+            .whatsapp-float svg {
+                width: 28px;
+                height: 28px;
+            }
+            section {
+                padding: 25px 10px; 
+            }
+            .module-item, .bonus-item, .testimonial-item, .price-section, .faq-item {
+                padding: 15px; /* Padding interno dos cards */
+            }
+            .testimonial-item p, .module-item p, .bonus-item p, .faq-item p, #autor p {
+                font-size: 0.95em; /* Leve redução no corpo do texto dentro de cards */
+            }
+             ul li {
+                font-size: 0.95em;
+                padding-left: 20px; /* Ajuste para o checkmark */
+            }
+            ul li::before {
+                left: -2px; /* Ajuste fino do checkmark */
+            }
         }
 
     </style>
@@ -566,3 +663,4 @@
     </script>
 </body>
 </html>
+
