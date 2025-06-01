@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -51,28 +51,45 @@
         header.hero { 
             background: var(--cor-fundo-principal); 
             color: var(--cor-texto-principal); 
-            padding: 60px 25px; /* Ajustado padding */
+            padding: 50px 25px 40px; /* Ajustado padding */
             text-align: center; 
             border-top-left-radius: 10px; 
             border-top-right-radius: 10px; 
         }
         header.hero h1 { 
-            font-size: 2.8em; /* Levemente ajustado */
+            font-size: 2.7em; /* Levemente ajustado */
             margin-bottom: 15px; 
             font-weight: 900; 
             text-transform: uppercase;
             letter-spacing: -1px; 
             color: var(--cor-primaria-verde); 
+            line-height: 1.2;
         }
         header.hero .subheadline { 
-            font-size: 1.3em; /* Levemente ajustado */
-            margin-bottom: 30px;
+            font-size: 1.2em; /* Levemente ajustado */
+            margin-bottom: 25px;
             font-weight: 400; 
             color: var(--cor-texto-secundario);
-            max-width: 700px; /* Limitar largura para melhor leitura */
+            max-width: 650px; /* Limitar largura para melhor leitura */
             margin-left: auto;
             margin-right: auto;
         }
+        .vsl-placeholder { /* Placeholder para Vídeo de Vendas */
+            background-color: #000;
+            border: 2px dashed var(--cor-borda-cards);
+            padding: 20px;
+            margin: 20px auto 30px;
+            max-width: 720px; /* Ajuste conforme a proporção do seu vídeo */
+            aspect-ratio: 16/9; /* Proporção comum para vídeos */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--cor-texto-secundario);
+            border-radius: 8px;
+        }
+        .vsl-placeholder p { font-size: 0.9em; }
+
         section { 
             padding: 45px 25px; /* Ajustado padding */
             border-bottom: 1px solid var(--cor-borda-cards); 
@@ -87,8 +104,8 @@
         h2 { 
             text-align: center; 
             color: var(--cor-texto-principal); 
-            margin-bottom: 35px; /* Ajustado */
-            font-size: 2.4em; /* Ajustado */
+            margin-bottom: 30px; /* Ajustado */
+            font-size: 2.2em; /* Ajustado */
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: -0.5px;
@@ -97,28 +114,27 @@
         /* Destaque para partes específicas dos H2 */
         h2 .highlight {
             color: var(--cor-primaria-verde);
-            display: block; /* Faz a parte destacada quebrar linha se necessário, ou pode ser inline */
-            margin-top: 5px; /* Pequeno espaço se quebrar linha */
+            display: inline; /* Para ficar na mesma linha, ajuste se necessário */
         }
          /* Linha decorativa opcional abaixo dos H2 */
         h2::after {
             content: '';
             display: block;
-            width: 80px; /* Largura da linha */
+            width: 70px; /* Largura da linha */
             height: 3px;  /* Altura da linha */
             background-color: var(--cor-primaria-verde);
-            margin: 15px auto 0; /* Espaçamento da linha */
+            margin: 12px auto 0; /* Espaçamento da linha */
             border-radius: 2px;
         }
         /* Remover a linha de alguns H2 específicos se não desejar em todos */
-        #problema h2::after, #solucao h2::after {
-            display: none; /* Exemplo: remover de "problema" e "solucao" */
+        #problema h2::after, #solucao h2::after, #oferta h2::after {
+            display: none; 
         }
 
 
         h3 { 
             color: var(--cor-primaria-verde); 
-            font-size: 1.7em; /* Ajustado */
+            font-size: 1.6em; /* Ajustado */
             margin-top: 20px; /* Ajustado */
             margin-bottom: 10px; /* Ajustado */
             font-weight: 700;
@@ -143,11 +159,11 @@
 
         .cta-button {
             display: inline-block; 
-            padding: 16px 30px; /* Ajustado */
+            padding: 15px 28px; /* Ajustado */
             background-color: var(--cor-primaria-verde); 
             color: var(--cor-texto-botao); 
             text-decoration: none;
-            font-size: 1.2em; /* Ajustado */
+            font-size: 1.15em; /* Ajustado */
             font-weight: 700; 
             border-radius: 6px; 
             text-align: center;
@@ -191,12 +207,12 @@
         }
         .module-item h3, .bonus-item h3 { 
             margin-top: 0; 
-            font-size: 1.4em; /* Ajustado */
+            font-size: 1.3em; /* Ajustado */
             color: var(--cor-primaria-verde);
         }
         .module-item p, .bonus-item p {
             color: var(--cor-texto-secundario);
-            font-size: 0.95em; /* Texto dos cards um pouco menor */
+            font-size: 0.9em; /* Texto dos cards um pouco menor */
         }
 
         .testimonials { text-align: center; }
@@ -207,8 +223,8 @@
             background-color: var(--cor-fundo-cards);
             border: 1px solid var(--cor-borda-cards);
         }
-        .testimonial-item h3 { color: var(--cor-texto-principal); text-transform: none; font-size: 1.3em; }
-        .testimonial-item p { color: var(--cor-texto-secundario); font-size: 0.95em; }
+        .testimonial-item h3 { color: var(--cor-texto-principal); text-transform: none; font-size: 1.2em; }
+        .testimonial-item p { color: var(--cor-texto-secundario); font-size: 0.9em; }
         .testimonial-item img, .testimonial-item .video-placeholder {
             max-width: 100%;
             height: auto;
@@ -217,19 +233,41 @@
             border: none; 
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
-        .video-placeholder {
+        .video-placeholder { /* Placeholder para vídeos de depoimento */
             background: #000000; 
             color: var(--cor-texto-secundario);
             padding: 50px 20px; /* Ajustado */
             text-align: center;
             border-radius: 6px;
-            margin: 10px 0; /* Ajustado */
+            margin: 10px auto; /* Ajustado e centralizado */
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 180px; /* Ajustado */
+            max-width: 480px; /* Limitar largura do placeholder de vídeo */
+            border: 1px dashed var(--cor-borda-cards);
         }
         .video-placeholder span { font-size: 0.9em; }
+
+        /* Prova social agregada */
+        .aggregated-proof {
+            text-align: center;
+            margin: 20px 0 10px;
+            font-size: 1.1em;
+            color: var(--cor-primaria-verde);
+            font-weight: 600;
+        }
+        .mini-case {
+            background-color: var(--cor-fundo-cards);
+            border: 1px solid var(--cor-borda-cards);
+            border-left: 4px solid var(--cor-primaria-verde);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        .mini-case strong { color: var(--cor-texto-principal); }
+
 
         footer { 
             text-align: center; 
@@ -240,6 +278,7 @@
         }
         footer a { color: var(--cor-primaria-verde); text-decoration: none; font-weight: 500; }
         footer a:hover { text-decoration: underline; color: #8ccf00;}
+        footer .cnpj { font-size: 0.8em; margin-top: 10px; opacity: 0.7;}
         
         ul { 
             list-style-type: none; 
@@ -260,10 +299,13 @@
             font-weight: bold;
         }
         /* Estilização específica para listas nas seções #como-funciona e #para-quem */
+        #como-funciona ul, #para-quem ul {
+            margin-top: 20px;
+        }
         #como-funciona ul li, #para-quem ul li {
-            font-size: 1.05em; /* Aumentar um pouco a fonte */
+            font-size: 1.0em; /* Aumentar um pouco a fonte */
             margin-bottom: 15px; /* Mais espaço entre itens */
-            padding: 10px;
+            padding: 12px 15px;
             background-color: var(--cor-fundo-cards);
             border-left: 4px solid var(--cor-primaria-verde);
             border-radius: 4px;
@@ -277,53 +319,104 @@
             font-weight: 700;
         }
 
-
+        #oferta .price-section ul {
+            margin-bottom: 20px;
+        }
+        #oferta .price-section ul li { /* Reset para a lista de itens da oferta */
+            font-size: 0.95em;
+            margin-bottom: 8px;
+            padding: 0 0 0 22px; /* Padding apenas para o ::before */
+            background-color: transparent;
+            border-left: none;
+            border-radius: 0;
+            color: var(--cor-texto-secundario);
+        }
         #oferta .price-section ul li::before {
             content: '✨'; 
+            left: 0;
         }
-
 
         .price-section {
             background-color: var(--cor-fundo-cards); 
-            padding: 35px; /* Ajustado */
+            padding: 30px; /* Ajustado */
             border-radius: 8px;
             text-align: center;
             border: 1px solid var(--cor-borda-cards);
             margin-top: 25px; /* Ajustado */
         }
+        .price-section .offer-title { /* Título para o pacote da oferta */
+            font-size: 1.5em;
+            color: var(--cor-primaria-verde);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .value-stack {
+            margin-bottom: 25px;
+            text-align: left;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .value-stack p {
+            font-size: 0.95em;
+            color: var(--cor-texto-secundario);
+            margin-bottom: 5px;
+        }
+        .value-stack .value-original {
+            text-decoration: line-through;
+            color: #888;
+            margin-left: 5px;
+        }
+        .value-stack .total-value {
+            font-weight: 700;
+            color: var(--cor-texto-principal);
+            margin-top: 10px;
+            font-size: 1.05em;
+        }
+
         .price-section p { color: var(--cor-texto-secundario); }
         .price-section p strong { color: var(--cor-texto-principal); }
-        .price-section .old-price {
-            text-decoration: line-through;
-            color: #888; 
-            font-size: 1.3em; /* Ajustado */
+        .price-section .current-price-label {
+            font-size: 1em;
+            text-transform: uppercase;
+            color: var(--cor-texto-secundario);
+            margin-top: 20px;
         }
         .price-section .current-price {
-            font-size: 3.2em; /* Ajustado */
+            font-size: 3.0em; /* Ajustado */
             color: var(--cor-primaria-verde);
             font-weight: 900;
-            margin: 8px 0; /* Ajustado */
+            margin: 5px 0 10px; /* Ajustado */
         }
         .price-section .installments {
-            font-size: 1.05em; /* Ajustado */
+            font-size: 1.0em; /* Ajustado */
             color: var(--cor-texto-secundario);
         }
         .price-section .cta-button { 
             background-color: var(--cor-primaria-verde);
             color: var(--cor-texto-botao);
             box-shadow: 0px 4px 0px 0px #000000;
+            margin-top: 15px;
         }
          .price-section .cta-button:hover {
             background-color: #8ccf00;
          }
+        .scarcity-timer { /* Placeholder para escassez/urgência */
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: var(--cor-primaria-verde);
+            font-weight: 500;
+        }
+
 
         .guarantee-badge {
             display: block;
-            max-width: 110px; /* Ajustado */
+            max-width: 100px; /* Ajustado */
             margin: 20px auto; /* Ajustado */
         }
         #garantia h2 { color: var(--cor-texto-principal); }
-        #garantia p { color: var(--cor-texto-secundario); text-align: center; font-size: 0.95em;}
+        #garantia p { color: var(--cor-texto-secundario); text-align: center; font-size: 0.9em;}
         #garantia p strong { color: var(--cor-texto-principal); }
 
 
@@ -331,29 +424,34 @@
             border-radius:50%; 
             border: 4px solid var(--cor-primaria-verde); /* Ajustado */
             box-shadow: 0 0 15px rgba(168, 252, 0, 0.25); /* Ajustado */
-            max-width: 160px; /* Ajustado */
+            max-width: 150px; /* Ajustado */
         }
-        #autor h3 { text-transform: none; font-size: 1.5em; margin-bottom: 5px;}
-        #autor p { color: var(--cor-texto-secundario); font-size: 0.95em;}
+        #autor h3 { text-transform: none; font-size: 1.4em; margin-bottom: 5px;}
+        #autor p { color: var(--cor-texto-secundario); font-size: 0.9em;}
         #autor p strong { color: var(--cor-texto-principal); }
+        #autor .mission-statement {
+            font-style: italic;
+            margin-top: 15px;
+            color: var(--cor-texto-secundario);
+        }
 
 
         .faq-item {
             background: var(--cor-fundo-cards);
-            padding: 18px 22px; /* Ajustado */
+            padding: 15px 20px; /* Ajustado */
             border-radius: 8px;
-            margin-bottom: 12px; /* Ajustado */
+            margin-bottom: 10px; /* Ajustado */
             border-left: 4px solid var(--cor-primaria-verde); 
         }
         .faq-item h3 {
             margin-top: 0;
-            font-size: 1.3em; /* Ajustado */
+            font-size: 1.2em; /* Ajustado */
             color: var(--cor-texto-principal);
             text-transform: none; 
         }
         .faq-item p {
             color: var(--cor-texto-secundario);
-            font-size: 0.9em; /* Ajustado */
+            font-size: 0.85em; /* Ajustado */
         }
 
         #ultimo-cta {
@@ -363,7 +461,7 @@
             padding: 50px 25px; /* Ajustado */
         }
          #ultimo-cta h2 { color: var(--cor-primaria-verde); } /* Destaque no último CTA */
-         #ultimo-cta p { font-size:1.2em; margin-bottom:25px; font-weight: 300; color: var(--cor-texto-secundario); }
+         #ultimo-cta p { font-size:1.15em; margin-bottom:25px; font-weight: 300; color: var(--cor-texto-secundario); }
 
         .whatsapp-float {
             position: fixed;
@@ -397,38 +495,41 @@
         /* Media Queries para Otimização Mobile */
         @media (max-width: 768px) {
             header.hero {
-                padding: 40px 15px; 
+                padding: 35px 15px 30px; 
             }
             header.hero h1 {
-                font-size: 2.0em; 
+                font-size: 1.9em; /* Ajustado */
                 letter-spacing: -0.5px; 
             }
             header.hero .subheadline {
-                font-size: 1.05em; 
+                font-size: 1.0em; /* Ajustado */
+            }
+            .vsl-placeholder {
+                margin: 15px auto 25px;
+                aspect-ratio: 16/9; /* Manter proporção */
             }
             h2 {
-                font-size: 1.8em; 
+                font-size: 1.7em; /* Ajustado */
                 letter-spacing: 0; 
             }
             h2 .highlight {
-                font-size: 0.9em; /* Ajustar tamanho do highlight em mobile */
-                margin-top: 3px;
+                font-size: 1em; /* Ajustar tamanho do highlight em mobile */
             }
-            h2::after { /* Linha decorativa menor em mobile */
+            h2::after { 
                 width: 60px;
                 height: 2px;
                 margin-top: 10px;
             }
             h3 {
-                font-size: 1.4em; 
+                font-size: 1.3em; /* Ajustado */
                 letter-spacing: 0;
             }
             .cta-button {
-                font-size: 1.05em; 
-                padding: 12px 25px; 
+                font-size: 1.0em; /* Ajustado */
+                padding: 12px 22px; /* Ajustado */
             }
             .price-section .current-price {
-                font-size: 2.4em; 
+                font-size: 2.2em; /* Ajustado */
             }
             .modules-grid, .bonuses-grid { 
                 grid-template-columns: 1fr; 
@@ -440,65 +541,71 @@
                  padding: 0 10px; 
             }
             .module-item, .bonus-item, .testimonial-item, .price-section, .faq-item {
-                padding: 20px; 
+                padding: 18px; /* Ajustado */
             }
              #como-funciona ul li, #para-quem ul li {
-                font-size: 1em; /* Ajuste para mobile */
+                font-size: 0.95em; /* Ajuste para mobile */
                 padding: 8px 10px;
             }
+            .price-section .offer-title { font-size: 1.3em; }
+            .value-stack p { font-size: 0.9em; }
+            .value-stack .total-value { font-size: 1em; }
+            .price-section .current-price-label { font-size: 0.9em; }
         }
 
         @media (max-width: 480px) {
             body {
-                line-height: 1.65; 
+                line-height: 1.6; /* Ajustado */ 
             }
             header.hero {
-                padding: 30px 10px;
+                padding: 25px 10px 20px;
             }
             header.hero h1 {
-                font-size: 1.7em; 
+                font-size: 1.6em; /* Ajustado */
             }
             header.hero .subheadline {
-                font-size: 0.95em;
-                line-height: 1.5; 
+                font-size: 0.9em; /* Ajustado */
+                line-height: 1.45; 
             }
+            .vsl-placeholder { min-height: 150px; padding: 10px; }
+
             h2 {
-                font-size: 1.5em; 
-                margin-bottom: 25px; 
+                font-size: 1.4em; /* Ajustado */
+                margin-bottom: 20px; /* Ajustado */
             }
              h2 .highlight {
-                font-size: 0.85em; 
+                font-size: 1em; 
             }
             h2::after {
                 width: 50px;
                 margin-top: 8px;
             }
             h3 {
-                font-size: 1.25em; 
+                font-size: 1.2em; /* Ajustado */
                 margin-bottom: 8px;
             }
             .cta-button {
-                font-size: 0.95em; 
-                padding: 10px 18px;
+                font-size: 0.9em; /* Ajustado */
+                padding: 10px 16px; /* Ajustado */
             }
             .price-section .current-price {
-                font-size: 2.0em;
+                font-size: 1.9em; /* Ajustado */
             }
             .price-section .old-price {
-                font-size: 1.0em;
+                font-size: 0.9em; /* Ajustado */
             }
             .price-section .installments {
-                font-size: 0.85em;
+                font-size: 0.8em; /* Ajustado */
             }
             .whatsapp-float { 
                 width: 50px;
                 height: 50px;
-                bottom: 15px; /* Ajustado */
-                right: 15px; /* Ajustado */
+                bottom: 15px; 
+                right: 15px; 
             }
             .whatsapp-float svg {
-                width: 26px; /* Ajustado */
-                height: 26px; /* Ajustado */
+                width: 26px; 
+                height: 26px; 
             }
             section {
                 padding: 20px 10px; 
@@ -507,223 +614,228 @@
                 padding: 15px; 
             }
             .testimonial-item p, .module-item p, .bonus-item p, .faq-item p, #autor p, #para-quem p, #problema p, #solucao p, #como-funciona p, #garantia p {
-                font-size: 0.9em; 
+                font-size: 0.85em; /* Ajustado */
             }
-             ul li { /* Estilo geral de lista para mobile */
-                font-size: 0.9em;
+             ul li { 
+                font-size: 0.85em;
                 padding-left: 18px; 
             }
-            ul li::before { /* Checkmark geral para mobile */
+            ul li::before { 
                 left: -2px; 
             }
-            #como-funciona ul li, #para-quem ul li { /* Específico para as seções destacadas em mobile */
-                font-size: 0.95em; 
-                padding: 10px; /* Padding interno do card do item */
-                margin-bottom: 12px;
+            #como-funciona ul li, #para-quem ul li { 
+                font-size: 0.9em; 
+                padding: 8px 10px; 
+                margin-bottom: 10px;
             }
             #como-funciona ul li::before, #para-quem ul li::before {
-                 content: ''; /* Mantém sem o checkmark padrão */
+                 content: ''; 
             }
             #ultimo-cta p {
-                font-size: 1.1em;
+                font-size: 1.0em; /* Ajustado */
             }
+            .price-section .offer-title { font-size: 1.1em; }
+            .value-stack p { font-size: 0.85em; }
+            .value-stack .total-value { font-size: 0.95em; }
         }
 
     </style>
 </head>
 <body>
     <header class="hero">
-        <h1>Venda até 300 Pedidos em 3 Horas com Lives!</h1> <p class="subheadline">O Método Live Secreta para donos de loja de moda faturarem alto, mesmo começando do zero.</p> <div class="center-button-container">
-            <a href="#oferta" class="cta-button">QUERO VENDER MAIS AGORA!</a> </div>
+        <h1>Suas Lives <span class="highlight">Não Vendem?</span> Descubra o Segredo para Fazer até <span class="highlight">300 Pedidos em 3 Horas!</span></h1>
+        <p class="subheadline">O Método Live Secreta para Lojas de Moda que querem transformar seguidores em clientes fiéis e aumentar drasticamente o faturamento.</p>
+        <div class="vsl-placeholder">
+            <p>[SEU VÍDEO DE VENDAS AQUI]<br>Assista e descubra como explodir suas vendas!</p>
+        </div>
+        <div class="center-button-container">
+            <a href="#oferta" class="cta-button">QUERO O MÉTODO LIVE SECRETA AGORA!</a> 
+        </div>
     </header>
 
     <div class="container">
         <section id="prova-social" class="testimonials">
-            <h2>Lojas de Moda Comprovam: <span class="highlight">O Live Secreta Funciona!</span></h2>
-            <p style="color: var(--cor-texto-secundario); max-width: 700px; margin-left:auto; margin-right:auto; font-size: 0.95em;">Veja resultados reais de quem já aplicou o método e transformou suas vendas:</p>
-            
+            <h2>Lojas de Moda <span class="highlight">Comprovam e Recomendam!</span></h2>
+            <p class="aggregated-proof">Mais de [NÚMERO DE ALUNOS/LOJAS] já estão faturando alto com o Live Secreta!</p>
             <div class="testimonial-item">
-                <h3>Loja Moda & Estilo: 150 Pedidos na Primeira Live!</h3>
+                <h3>Loja Moda & Estilo: De 10 para <span class="highlight">150 Pedidos</span> na Primeira Live Pós-Método!</h3>
                 <div class="video-placeholder">
-                    <span>[SEU VÍDEO DE DEPOIMENTO AQUI - Ex: &lt;iframe width="100%" height="315" src="URL_DO_VIDEO" ...&gt;&lt;/iframe&gt; ] <br> Depoimento de Ana Silva</span>
+                    <span>[SEU VÍDEO DE DEPOIMENTO DA ANA SILVA AQUI]</span>
                 </div>
-                <p>"Nunca vendemos tanto em tão pouco tempo. O método é transformador!" - <strong>Ana Silva</strong></p>
+                <p>"Nunca vendemos tanto em tão pouco tempo. O método é transformador e o suporte é incrível!" - <strong>Ana Silva</strong></p>
             </div>
-
+            <div class="mini-case">
+                <p><strong>Antes do Live Secreta:</strong> "Nossas lives mal pagavam o investimento em peças."</p>
+                <p><strong>Depois do Live Secreta:</strong> "Fizemos R$XX.XXX em 3 horas na nossa última live! Mudou o jogo para nós." - [Nome Cliente Mini-Case]</p>
+            </div>
             <div class="testimonial-item">
-                <h3>Glamour Boutique: Grupo VIP Lotado e Vendas Disparadas!</h3>
-                <img src="https://placehold.co/600x350/1A1A1A/A8FC00?text=Print+Resultados+Reais" alt="[Imagem de Print dos Resultados da Loja Glamour Boutique]">
-                <p>"Nosso faturamento mudou completamente com o Live Secreta." - <strong>Carlos Mendes</strong></p>
+                <h3>Glamour Boutique: Grupo VIP Lotado e <span class="highlight">Vendas Disparadas!</span></h3>
+                <img src="https://placehold.co/600x350/1A1A1A/A8FC00?text=Print+Resultados+Reais+Glamour+Boutique" alt="[Imagem de Print dos Resultados da Loja Glamour Boutique]">
+                <p>"Nosso faturamento mudou completamente com o Live Secreta. Finalmente entendemos como fazer lives que vendem de verdade!" - <strong>Carlos Mendes</strong></p>
             </div>
             <div class="center-button-container">
-                <a href="#oferta" class="cta-button">QUERO RESULTADOS ASSIM!</a>
+                <a href="#oferta" class="cta-button">QUERO RESULTADOS ASSIM TAMBÉM!</a>
             </div>
         </section>
 
         <section id="problema">
-            <h2>Suas Lives <span class="highlight">Não Vendem o Esperado?</span></h2>
-            <p>Você investe tempo e energia, mas suas lives de moda não convertem espectadores em clientes? Sente que poderia vender muito mais? Muitas lojas enfrentam essa frustração. <strong>A boa notícia: existe uma solução.</strong></p>
+            <h2>Cansado(a) de Lives que <span class="highlight">Não Convertem?</span></h2>
+            <p>Você se esforça, mostra suas melhores peças, mas as vendas nas lives não decolam? Sente que está perdendo tempo e dinheiro com estratégias que não funcionam mais? Seus concorrentes parecem ter um segredo que você não descobriu? <strong>Você não está sozinho(a), e a solução está mais perto do que imagina.</strong></p>
         </section>
 
         <section id="solucao">
-            <h2>O Método Live Secreta: <span class="highlight">Sua Máquina de Vendas!</span></h2>
-            <p>O Live Secreta é a estratégia validada para lojas de moda alcançarem picos de <strong>até 300 pedidos em 3 horas</strong>. Transforme suas lives em eventos de vendas lucrativos, do aquecimento à conversão explosiva!</p>
+            <h2>O Método Live Secreta: Sua <span class="highlight">Máquina de Vendas Online!</span></h2>
+            <p>Imagine transformar cada live num evento de vendas altamente lucrativo, capaz de gerar <strong>até 300 pedidos em apenas 3 horas</strong>. Com o Live Secreta, você terá o passo a passo exato, testado e validado por dezenas de lojas de moda, para explodir seu faturamento!</p>
         </section>
 
         <section id="como-funciona">
-            <h2>Como o Live Secreta <span class="highlight">Transforma Suas Vendas?</span></h2>
-            <p>Nossa metodologia é um ciclo completo e comprovado:</p>
+            <h2>Como o Live Secreta <span class="highlight">Impulsiona Suas Vendas?</span></h2>
+            <p>Nossa metodologia comprovada foca em resultados rápidos através de 4 pilares:</p>
             <ul>
-                <li><strong>Atração Certa:</strong> Captamos leads qualificados para seu Grupo VIP.</li>
-                <li><strong>Aquecimento Estratégico:</strong> Criamos desejo e antecipação antes da live.</li>
-                <li><strong>Conversão Explosiva:</strong> Técnicas de venda que geram pedidos imediatos.</li>
-                <li><strong>Planeamento de 7 Dias:</strong> Um cronograma para máximo impacto.</li>
+                <li><strong>Atração Magnética:</strong> Aprenda a captar até <span class="highlight">3X mais leads qualificados</span> para seu Grupo VIP, mesmo com baixo orçamento.</li>
+                <li><strong>Aquecimento Estratégico:</strong> Crie um desejo irresistível e uma antecipação que <span class="highlight">aumenta em até 50% a intenção de compra</span> antes mesmo da live começar.</li>
+                <li><strong>Conversão Explosiva na Live:</strong> Domine técnicas de apresentação e gatilhos mentais que podem <span class="highlight">triplicar suas vendas</span> durante a transmissão.</li>
+                <li><strong>Planeamento Lucrativo de 7 Dias:</strong> Siga um cronograma detalhado que organiza todo o processo, <span class="highlight">eliminando o stress e maximizando o impacto</span> de cada live.</li>
             </ul>
             <div class="center-button-container">
-                <a href="#oferta" class="cta-button">QUERO DOMINAR ESSE MÉTODO!</a>
+                <a href="#oferta" class="cta-button">QUERO DOMINAR ESSA ESTRATÉGIA!</a>
             </div>
         </section>
 
         <section id="modulos">
-            <h2>O Que Você Vai <span class="highlight">Dominar no Live Secreta?</span></h2>
-            <p style="text-align:center; margin-bottom: 30px; color: var(--cor-texto-secundario); max-width: 700px; margin-left:auto; margin-right:auto; font-size: 0.95em;">Um passo a passo completo para resultados rápidos:</p>
+            <h2>O Que Você Vai <span class="highlight">Dominar para Vender Mais?</span></h2>
+            <p style="text-align:center; margin-bottom: 30px; color: var(--cor-texto-secundario); max-width: 700px; margin-left:auto; margin-right:auto; font-size: 0.9em;">Com o Live Secreta, você terá acesso a um arsenal de conhecimento prático, focado em resultados:</p>
             <div class="modules-grid">
                 <div class="module-item">
-                    <h3>Fundamentos da Live que Vende</h3>
-                    <p>Descubra por que lives comuns falham e o segredo das que convertem.</p>
+                    <h3>Pilar 1: Atração e Engajamento Turbo</h3>
+                    <p>Domine a arte de construir uma audiência faminta por seus produtos (Módulos de Fundamentos, Captação de Leads e Aquecimento de Grupo).</p>
                 </div>
                 <div class="module-item">
-                    <h3>Estrutura Secreta Completa</h3>
-                    <p>Domine captação, aquecimento VIP e o plano de 7 dias para o sucesso.</p>
+                    <h3>Pilar 2: Execução de Lives que Convertem</h3>
+                    <p>Aprenda a montar uma estrutura profissional e apresentar suas peças de forma irresistível, transformando espectadores em clientes (Módulos de Estrutura da Live e Apresentação de Alta Conversão).</p>
                 </div>
                 <div class="module-item">
-                    <h3>Captação de Clientes Famintos</h3>
-                    <p>Atraia o público certo com tráfego orgânico e pago (R$10-R$50/dia).</p>
+                    <h3>Pilar 3: Pós-Live, Análise e Crescimento Contínuo</h3>
+                    <p>Descubra como continuar vendendo após a live, fidelizar clientes, analisar suas métricas e escalar seus resultados para o próximo nível (Módulos de Atendimento, Pós-Live, Análise e Escala).</p>
                 </div>
-                <div class="module-item">
-                    <h3>Aquecimento que Prepara a Compra</h3>
-                    <p>Engaje seu grupo VIP e crie desejo ardente pelos seus produtos.</p>
-                </div>
-                <div class="module-item">
-                    <h3>Live Profissional e Irresistível</h3>
-                    <p>Monte uma estrutura (cenário, luz, som) que valoriza e vende suas peças.</p>
-                </div>
-                <div class="module-item">
-                    <h3>Apresentação de Alta Conversão</h3>
-                    <p>Roteiros e gatilhos mentais para prender a atenção e fechar vendas.</p>
-                </div>
-                </div>
-            <p style="text-align:center; margin-top: 25px; font-size:0.9em; color: var(--cor-texto-secundario);">E muito mais: Atendimento, Pós-Live, Análise e Escala, Casos Reais e Planos Prontos!</p>
+            </div>
+            <p style="text-align:center; margin-top: 25px; font-size:0.85em; color: var(--cor-texto-secundario);"><i>(O método completo inclui 10 módulos detalhados, casos reais e planos de ação prontos!)</i></p>
         </section>
 
         <section id="para-quem">
-            <h2>Este Método é <span class="highlight">Para Você</span>, Dono(a) de Loja de Moda, Que:</h2>
+            <h2>Este Método é <span class="highlight">Exclusivo Para Você</span>, Dono(a) de Loja de Moda, Que:</h2>
             <ul>
-                <li>Quer vender <strong>muito mais</strong> em suas lives.</li>
-                <li>Busca um método <strong>testado e direto</strong> ao ponto.</li>
-                <li>Deseja atrair e engajar o <strong>público certo</strong>.</li>
-                <li>Sonha com picos de vendas <strong>consistentes</strong>.</li>
+                <li>Quer transformar suas lives em sua <span class="highlight">principal fonte de faturamento.</span></li>
+                <li>Busca um <span class="highlight">passo a passo claro e testado</span>, sem enrolação.</li>
+                <li>Deseja <span class="highlight">atrair clientes compradores</span>, mesmo com poucos seguidores.</li>
+                <li>Sonha em ter <span class="highlight">picos de vendas previsíveis</span> e lucrativos.</li>
             </ul>
-            <p style="text-align:center; margin-top:20px;"><strong>Se você se identifica, o Live Secreta é seu próximo nível!</strong></p>
+            <p style="text-align:center; margin-top:20px;"><strong>Se é isso que você busca, o Live Secreta foi feito para você!</strong></p>
         </section>
 
         <section id="bonus">
-            <h2>Leve Estes Bónus Exclusivos <span class="highlight">GRÁTIS:</span></h2>
+            <h2>Turbine Seus Resultados com Estes <span class="highlight">Bónus Exclusivos (Valor Inestimável):</span></h2>
             <div class="bonuses-grid">
                 <div class="bonus-item">
-                    <h3>Grupo VIP de Suporte</h3>
-                    <p>Tire dúvidas e conecte-se com outros lojistas de sucesso.</p>
+                    <h3>Grupo VIP de Suporte & Networking</h3>
+                    <p>Acesso direto à nossa equipa e a uma comunidade de lojistas de sucesso para tirar dúvidas e acelerar seu aprendizado.</p>
                 </div>
                 <div class="bonus-item">
-                    <h3>Guia Tráfego Low-Cost</h3>
-                    <p>Anúncios eficazes no Insta/Face com apenas R$5-R$50/dia.</p>
+                    <h3>Guia Prático: Tráfego Pago Low-Cost</h3>
+                    <p>Domine anúncios no Insta/Face com apenas R$5-R$50/dia. Inclui segmentações validadas para moda!</p>
                 </div>
                 <div class="bonus-item">
-                    <h3>Biblioteca de Roteiros</h3>
-                    <p>+10 modelos prontos para lives que vendem (30, 60, 90 min).</p>
+                    <h3>Biblioteca Premium de Roteiros para Lives</h3>
+                    <p>Mais de 10 modelos de roteiros prontos e testados para lives de 30, 60 e 90 minutos que vendem muito.</p>
                 </div>
             </div>
             <div class="center-button-container">
-                <a href="#oferta" class="cta-button">QUERO OS BÓNUS E O MÉTODO!</a>
+                <a href="#oferta" class="cta-button">QUERO TODOS OS BÓNUS AGORA!</a>
             </div>
         </section>
 
         <section id="oferta">
-            <h2>Sua Chance de Transformar Suas Lives em Uma <span class="highlight">Máquina de Vendas!</span></h2>
-            <p style="text-align:center; color: var(--cor-texto-secundario); max-width: 700px; margin-left:auto; margin-right:auto; font-size:0.95em;">Implemente o Live Secreta e alcance picos de vendas de até <strong>300 pedidos em 3 horas!</strong></p>
+            <h2><span class="highlight">Acesso Imediato</span> à Sua Nova Realidade de Vendas!</h2>
             
             <div class="price-section">
-                <p><strong>O que você recebe ao garantir o seu acesso HOJE:</strong></p>
-                <ul>
-                    <li>Método Live Secreta Completo (10 Módulos).</li>
-                    <li>Materiais de Apoio (checklists, planos).</li>
-                    <li>Bónus: Grupo VIP de Suporte.</li>
-                    <li>Bónus: Guia Tráfego Low-Cost.</li>
-                    <li>Bónus: Biblioteca de Roteiros.</li>
-                </ul>
-                <p style="margin-top:25px;">De <span class="old-price">R$ VALOR_ANTIGO_AQUI</span> por apenas:</p>
+                <h3 class="offer-title">Pacote Completo Método Live Secreta</h3>
+                <div class="value-stack">
+                    <p>Método Live Secreta Completo (10 Módulos Detalhados) <span class="value-original">(Valor R$ 997,00)</span></p>
+                    <p>Materiais de Apoio (Checklists, Planilhas, Planos de Ação) <span class="value-original">(Valor R$ 297,00)</span></p>
+                    <p>Bónus 1: Grupo VIP de Suporte & Networking <span class="value-original">(Valor R$ 497,00/ano)</span></p>
+                    <p>Bónus 2: Guia Prático Tráfego Pago Low-Cost <span class="value-original">(Valor R$ 197,00)</span></p>
+                    <p>Bónus 3: Biblioteca Premium de Roteiros para Lives <span class="value-original">(Valor R$ 397,00)</span></p>
+                    <p class="total-value">Valor Total de Tudo Que Você Leva: <span class="value-original">R$ 2.385,00</span></p>
+                </div>
+
+                <p class="current-price-label">Seu Investimento Para Transformar Suas Vendas Hoje:</p>
                 <div class="current-price">R$ SEU_PRECO_AQUI</div>
                 <p class="installments">(Ou em até X parcelas de R$ VALOR_DA_PARCELA_AQUI no cartão)</p>
-                <a href="LINK_DO_SEU_CHECKOUT_AQUI" class="cta-button">SIM, QUERO VENDER ATÉ 300 PEDIDOS!</a>
-                <p style="font-size:0.9em; margin-top:15px; color: var(--cor-texto-secundario);">Compra 100% segura. Os seus dados estão protegidos.</p>
+                <div class="scarcity-timer">
+                    <p>⚠️ Esta oferta especial com todos os bónus é por <span class="highlight">tempo limitado!</span></p>
+                    </div>
+                <a href="LINK_DO_SEU_CHECKOUT_AQUI" class="cta-button">QUERO EXPLODIR MINHAS VENDAS AGORA!</a>
+                <p style="font-size:0.85em; margin-top:15px; color: var(--cor-texto-secundario);">Compra 100% Segura | Acesso Imediato</p>
             </div>
         </section>
 
         <section id="garantia">
-            <h2>Seu Risco é <span class="highlight">ZERO!</span> Garantia Incondicional de 7 Dias</h2>
+            <h2>Sua Decisão <span class="highlight">100% Livre de Risco!</span></h2>
             <div style="text-align:center;">
-                <img src="https://placehold.co/110x110/1A1A1A/A8FC00?text=7+DIAS&font=montserrat" alt="[Imagem de Selo de Garantia de 7 Dias]" class="guarantee-badge">
+                <img src="https://placehold.co/100x100/1A1A1A/A8FC00?text=RISCO+ZERO&font=montserrat" alt="[Imagem de Selo de Garantia de 7 Dias Risco Zero]" class="guarantee-badge">
             </div>
-            <p>Teste o Live Secreta por <strong>7 dias completos</strong>. Se não for para você, devolvemos 100% do seu investimento. Sem perguntas, sem burocracia.</p>
-            <p><strong>O risco é todo meu. Você só tem a ganhar!</strong></p>
+            <p>Você tem <strong>7 dias completos</strong> para mergulhar no Método Live Secreta. Se, por qualquer motivo, você não ficar totalmente satisfeito(a) ou não vir o potencial de transformação para sua loja, basta nos enviar um e-mail e devolveremos 100% do seu investimento. Simples, rápido e sem perguntas.</p>
+            <p><strong>O risco é todo nosso. A oportunidade de transformar suas vendas é toda sua.</strong></p>
         </section>
 
         <section id="autor">
-            <h2 style="margin-bottom: 25px;">Quem Criou o <span class="highlight">Método Live Secreta?</span></h2>
+            <h2 style="margin-bottom: 25px;">Quem Vai Te Guiar Nesta <span class="highlight">Jornada de Sucesso?</span></h2>
             <div style="text-align:center; margin-bottom:15px;">
-                 <img src="https://placehold.co/160x160/1A1A1A/FFFFFF?text=Sua+Foto&font=montserrat" alt="[Imagem de Foto do Autor(a)]">
+                 <img src="https://placehold.co/150x150/1A1A1A/FFFFFF?text=Sua+Foto&font=montserrat" alt="[Imagem de Foto do Autor(a)]">
             </div>
             <h3 style="text-align:center; color: var(--cor-texto-principal); text-transform:none;">[O SEU NOME / NOME DA SUA EMPRESA]</h3>
-            <p style="text-align:center; font-style:italic; color: var(--cor-primaria-verde); margin-bottom:15px; font-weight:500;">Especialista em Vendas para Moda</p>
-            <p style="text-align: center; max-width: 650px; margin-left:auto; margin-right:auto; font-size:0.9em;">Com [X] anos de experiência e após ajudar [NÚMERO] lojistas a explodirem suas vendas, compilei neste método o exato passo a passo para você transformar suas lives em eventos de faturamento. Meu objetivo é o seu sucesso.</p>
+            <p style="text-align:center; font-style:italic; color: var(--cor-primaria-verde); margin-bottom:15px; font-weight:500;">Especialista em Vendas Online para Moda & Criador(a) do Método Live Secreta</p>
+            <p style="text-align: center; max-width: 650px; margin-left:auto; margin-right:auto; font-size:0.9em;">Depois de [X anos/meses] no campo de batalha do varejo de moda, testando o que realmente funciona (e o que não funciona!) para vender online, desenvolvi o Método Live Secreta. Minha paixão é ver lojistas como você superarem as dificuldades e alcançarem a liberdade financeira e o reconhecimento que merecem. Já ajudei [NÚMERO] de empreendedores a mudarem seus negócios através desta metodologia.</p>
+            <p class="mission-statement" style="text-align: center; max-width: 650px; margin-left:auto; margin-right:auto; font-size:0.9em;"><strong>Minha missão:</strong> "Capacitar você com as estratégias exatas para transformar suas lives na sua maior fonte de renda, de forma consistente e lucrativa."</p>
         </section>
 
         <section id="faq">
-            <h2>Perguntas <span class="highlight">Frequentes</span></h2>
+            <h2>Ainda Tem Dúvidas? <span class="highlight">Nós Respondemos!</span></h2>
             <div class="faq-item">
-                <h3>Para quem é o método?</h3>
-                <p>Para donos de loja de moda que querem vender mais com lives, mesmo com poucos seguidores ou baixo orçamento.</p>
+                <h3>Para quem é exatamente este método?</h3>
+                <p>Para donos de lojas de moda (roupas, calçados, acessórios, etc.) que desejam usar lives para vender muito mais, mesmo que estejam começando ou tenham poucos seguidores.</p>
             </div>
             <div class="faq-item">
-                <h3>Preciso ter muitos seguidores?</h3>
-                <p>Não. Ensinamos a atrair o público certo, focando na qualidade, não apenas na quantidade de seguidores.</p>
+                <h3>Realmente funciona se eu tiver poucos seguidores?</h3>
+                <p>Sim! O foco é na estratégia de atração e engajamento do público certo, não apenas em números. Ensinamos como fazer isso do zero.</p>
             </div>
             <div class="faq-item">
-                <h3>É difícil aplicar sem conhecimento técnico?</h3>
-                <p>Não! O método é passo a passo e simples. Você terá suporte total no nosso Grupo VIP.</p>
+                <h3>Preciso ser expert em tecnologia?</h3>
+                <p>De forma alguma! O método é passo a passo, prático e com linguagem simples. Além disso, você terá suporte no Grupo VIP.</p>
             </div>
             <div class="faq-item">
-                <h3>Qual o tempo de acesso?</h3>
-                <p>[Defina o tempo de acesso, ex: Acesso vitalício! / Acesso por 1 ano.]. Reveja as aulas quando quiser.</p>
+                <h3>Por quanto tempo terei acesso ao conteúdo?</h3>
+                <p>[Defina o tempo de acesso e coloque aqui, ex: Acesso vitalício para você ver e rever quantas vezes quiser! / Acesso por 1 ano completo.].</p>
             </div>
             <div class="faq-item">
                 <h3>Como funciona o suporte?</h3>
-                <p>No nosso Grupo VIP exclusivo no WhatsApp, com nossa equipa e outros alunos.</p>
+                <p>Através do nosso Grupo VIP exclusivo no WhatsApp, onde você pode tirar dúvidas diretamente com nossa equipa e interagir com outros alunos.</p>
             </div>
             <div class="faq-item">
-                <h3>E se eu não gostar?</h3>
-                <p>Garantia de 7 dias: se não for para você, peça reembolso total do seu dinheiro.</p>
+                <h3>E se eu não gostar ou não tiver resultados? É seguro?</h3>
+                <p>Totalmente seguro! Você tem a nossa Garantia Incondicional de 7 Dias. Se não ficar satisfeito(a), devolvemos 100% do seu dinheiro. O risco é zero.</p>
             </div>
             </section>
 
         <section id="ultimo-cta">
-            <h2>Pronto(a) Para Bater <span class="highlight">Recordes de Pedidos</span> com Suas Lives?</h2>
-            <p>Chega de lives sem resultado! Transforme suas vendas AGORA com o Método Live Secreta.</p>
-            <a href="LINK_DO_SEU_CHECKOUT_AQUI" class="cta-button">QUERO VENDER MUITO MAIS AGORA!</a>
+            <h2>Sua Loja de Moda Pronta Para <span class="highlight">Vender Como Nunca?</span></h2>
+            <p>Não adie mais o sucesso do seu negócio. O Método Live Secreta é o caminho mais rápido e seguro para transformar suas lives em uma verdadeira máquina de pedidos.</p>
+            <a href="LINK_DO_SEU_CHECKOUT_AQUI" class="cta-button">QUERO MINHA VAGA NO LIVE SECRETA AGORA!</a>
         </section>
     </div>
     <footer>
         <p>&copy; <span id="currentYear"></span> [Nome da Sua Empresa/Seu Nome] - Todos os direitos reservados.</p>
+        <p class="cnpj">CNPJ: [SEU CNPJ AQUI, EX: XX.XXX.XXX/0001-XX (Opcional, mas recomendado)]</p>
         <p>
             <a href="#termos">Termos de Uso</a> | 
             <a href="#privacidade">Política de Privacidade</a> |
